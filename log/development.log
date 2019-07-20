@@ -10164,3 +10164,1211 @@ Processing by UsersController#index as HTML
 Completed 200 OK in 42ms (Views: 40.4ms | ActiveRecord: 0.6ms)
 
 
+DEPRECATION WARNING: set the 'will_paginate.previous_label' key in your i18n locale instead of editing pagination_options (called from /home/ec2-user/environment/attendance_app/config/environment.rb:8:in `<top (required)>')
+DEPRECATION WARNING: set the 'will_paginate.next_label' key in your i18n locale instead of editing pagination_options (called from /home/ec2-user/environment/attendance_app/config/environment.rb:9:in `<top (required)>')
+DEPRECATION WARNING: set the 'will_paginate.previous_label' key in your i18n locale instead of editing pagination_options (called from /home/ec2-user/environment/attendance_app/config/environment.rb:8:in `<top (required)>')
+DEPRECATION WARNING: set the 'will_paginate.next_label' key in your i18n locale instead of editing pagination_options (called from /home/ec2-user/environment/attendance_app/config/environment.rb:9:in `<top (required)>')
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateAttendances (20190718162941)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE TABLE "attendances" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "worked_on" date, "started_at" datetime, "finished_at" datetime, "note" varchar, "user_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, CONSTRAINT "fk_rails_77ad02f5c5"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_attendances_on_user_id" ON "attendances" ("user_id")[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190718162941"]]
+  [1m[35m (6.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_attendances_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_attendances_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+DEPRECATION WARNING: set the 'will_paginate.previous_label' key in your i18n locale instead of editing pagination_options (called from /home/ec2-user/environment/attendance_app/config/environment.rb:8:in `<top (required)>')
+DEPRECATION WARNING: set the 'will_paginate.next_label' key in your i18n locale instead of editing pagination_options (called from /home/ec2-user/environment/attendance_app/config/environment.rb:9:in `<top (required)>')
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+DEPRECATION WARNING: set the 'will_paginate.previous_label' key in your i18n locale instead of editing pagination_options (called from /home/ec2-user/environment/attendance_app/config/environment.rb:8:in `<top (required)>')
+DEPRECATION WARNING: set the 'will_paginate.next_label' key in your i18n locale instead of editing pagination_options (called from /home/ec2-user/environment/attendance_app/config/environment.rb:9:in `<top (required)>')
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_attendances_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_attendances_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+DEPRECATION WARNING: set the 'will_paginate.previous_label' key in your i18n locale instead of editing pagination_options (called from /home/ec2-user/environment/attendance_app/config/environment.rb:8:in `<top (required)>')
+DEPRECATION WARNING: set the 'will_paginate.next_label' key in your i18n locale instead of editing pagination_options (called from /home/ec2-user/environment/attendance_app/config/environment.rb:9:in `<top (required)>')
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+DEPRECATION WARNING: set the 'will_paginate.previous_label' key in your i18n locale instead of editing pagination_options (called from /home/ec2-user/environment/attendance_app/config/environment.rb:8:in `<top (required)>')
+DEPRECATION WARNING: set the 'will_paginate.next_label' key in your i18n locale instead of editing pagination_options (called from /home/ec2-user/environment/attendance_app/config/environment.rb:9:in `<top (required)>')
+DEPRECATION WARNING: set the 'will_paginate.previous_label' key in your i18n locale instead of editing pagination_options (called from /home/ec2-user/environment/attendance_app/config/environment.rb:8:in `<top (required)>')
+DEPRECATION WARNING: set the 'will_paginate.next_label' key in your i18n locale instead of editing pagination_options (called from /home/ec2-user/environment/attendance_app/config/environment.rb:9:in `<top (required)>')
+Started GET "/" for 217.178.27.147 at 2019-07-20 06:49:51 +0000
+Cannot render console from 217.178.27.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#top as HTML
+  Rendering static_pages/top.html.erb within layouts/application
+  Rendered static_pages/top.html.erb within layouts/application (1.4ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (43.2ms)
+Completed 200 OK in 398ms (Views: 389.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 217.178.27.147 at 2019-07-20 06:49:53 +0000
+Cannot render console from 217.178.27.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StaticPagesController#top as HTML
+  Rendering static_pages/top.html.erb within layouts/application
+  Rendered static_pages/top.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_shim.html.erb (0.2ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (2.2ms)
+Completed 200 OK in 37ms (Views: 35.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users" for 217.178.27.147 at 2019-07-20 06:50:03 +0000
+Cannot render console from 217.178.27.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  Rendered users/index.html.erb within layouts/application (1089.3ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+Completed 200 OK in 1125ms (Views: 1122.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 217.178.27.147 at 2019-07-20 06:50:07 +0000
+Cannot render console from 217.178.27.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by StaticPagesController#top as HTML
+  Rendering static_pages/top.html.erb within layouts/application
+  Rendered static_pages/top.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (1.8ms)
+Completed 200 OK in 36ms (Views: 35.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/1" for 217.178.27.147 at 2019-07-20 06:50:09 +0000
+Cannot render console from 217.178.27.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+Completed 200 OK in 37ms (Views: 34.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/1" for 217.178.27.147 at 2019-07-20 06:52:47 +0000
+Cannot render console from 217.178.27.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+Completed 200 OK in 37ms (Views: 34.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/1" for 217.178.27.147 at 2019-07-20 06:53:18 +0000
+Cannot render console from 217.178.27.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+Completed 200 OK in 37ms (Views: 34.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/1" for 217.178.27.147 at 2019-07-20 06:53:21 +0000
+Cannot render console from 217.178.27.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+Completed 200 OK in 37ms (Views: 34.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/1" for 217.178.27.147 at 2019-07-20 06:55:35 +0000
+Cannot render console from 217.178.27.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_shim.html.erb (0.2ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+Completed 200 OK in 42ms (Views: 39.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/1" for 217.178.27.147 at 2019-07-20 06:55:38 +0000
+Cannot render console from 217.178.27.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+Completed 200 OK in 57ms (Views: 55.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/1" for 217.178.27.147 at 2019-07-20 06:56:52 +0000
+Cannot render console from 217.178.27.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+Completed 200 OK in 36ms (Views: 34.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/1" for 217.178.27.147 at 2019-07-20 06:57:11 +0000
+Cannot render console from 217.178.27.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+Completed 200 OK in 46ms (Views: 44.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/1" for 217.178.27.147 at 2019-07-20 06:57:13 +0000
+Cannot render console from 217.178.27.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+Completed 200 OK in 44ms (Views: 42.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/1" for 217.178.27.147 at 2019-07-20 06:57:42 +0000
+Cannot render console from 217.178.27.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.7ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 37ms (Views: 34.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/1" for 217.178.27.147 at 2019-07-20 07:04:21 +0000
+Cannot render console from 217.178.27.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_shim.html.erb (0.2ms)
+  Rendered layouts/_header.html.erb (1.1ms)
+Completed 200 OK in 52ms (Views: 35.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/users/1" for 217.178.27.147 at 2019-07-20 07:09:00 +0000
+Cannot render console from 217.178.27.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 102ms (Views: 98.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/1" for 217.178.27.147 at 2019-07-20 07:53:53 +0000
+Cannot render console from 217.178.27.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 1.1ms)
+
+
+  
+NoMethodError (undefined method `attendaces' for #<User:0x00007f2cf812dd48>
+Did you mean?  attendances
+               attendances=):
+  
+app/controllers/application_controller.rb:13:in `set_one_month'
+Started GET "/users/1" for 217.178.27.147 at 2019-07-20 07:57:17 +0000
+Cannot render console from 217.178.27.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "attendances" WHERE "attendances"."user_id" = ? AND ("attendances"."worked_on" BETWEEN ? AND ?)[0m  [["user_id", 1], ["worked_on", "2019-07-01"], ["worked_on", "2019-07-31"]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.6ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-07-01"], ["user_id", 1], ["created_at", "2019-07-20 07:57:17.577279"], ["updated_at", "2019-07-20 07:57:17.577279"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-07-02"], ["user_id", 1], ["created_at", "2019-07-20 07:57:17.580757"], ["updated_at", "2019-07-20 07:57:17.580757"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-07-03"], ["user_id", 1], ["created_at", "2019-07-20 07:57:17.582105"], ["updated_at", "2019-07-20 07:57:17.582105"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-07-04"], ["user_id", 1], ["created_at", "2019-07-20 07:57:17.583440"], ["updated_at", "2019-07-20 07:57:17.583440"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-07-05"], ["user_id", 1], ["created_at", "2019-07-20 07:57:17.584789"], ["updated_at", "2019-07-20 07:57:17.584789"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-07-06"], ["user_id", 1], ["created_at", "2019-07-20 07:57:17.586147"], ["updated_at", "2019-07-20 07:57:17.586147"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-07-07"], ["user_id", 1], ["created_at", "2019-07-20 07:57:17.587467"], ["updated_at", "2019-07-20 07:57:17.587467"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-07-08"], ["user_id", 1], ["created_at", "2019-07-20 07:57:17.589638"], ["updated_at", "2019-07-20 07:57:17.589638"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-07-09"], ["user_id", 1], ["created_at", "2019-07-20 07:57:17.590988"], ["updated_at", "2019-07-20 07:57:17.590988"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-07-10"], ["user_id", 1], ["created_at", "2019-07-20 07:57:17.592313"], ["updated_at", "2019-07-20 07:57:17.592313"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-07-11"], ["user_id", 1], ["created_at", "2019-07-20 07:57:17.593743"], ["updated_at", "2019-07-20 07:57:17.593743"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-07-12"], ["user_id", 1], ["created_at", "2019-07-20 07:57:17.595074"], ["updated_at", "2019-07-20 07:57:17.595074"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-07-13"], ["user_id", 1], ["created_at", "2019-07-20 07:57:17.596384"], ["updated_at", "2019-07-20 07:57:17.596384"]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-07-14"], ["user_id", 1], ["created_at", "2019-07-20 07:57:17.597695"], ["updated_at", "2019-07-20 07:57:17.597695"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-07-15"], ["user_id", 1], ["created_at", "2019-07-20 07:57:17.599159"], ["updated_at", "2019-07-20 07:57:17.599159"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-07-16"], ["user_id", 1], ["created_at", "2019-07-20 07:57:17.600478"], ["updated_at", "2019-07-20 07:57:17.600478"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-07-17"], ["user_id", 1], ["created_at", "2019-07-20 07:57:17.601791"], ["updated_at", "2019-07-20 07:57:17.601791"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-07-18"], ["user_id", 1], ["created_at", "2019-07-20 07:57:17.603201"], ["updated_at", "2019-07-20 07:57:17.603201"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-07-19"], ["user_id", 1], ["created_at", "2019-07-20 07:57:17.604511"], ["updated_at", "2019-07-20 07:57:17.604511"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-07-20"], ["user_id", 1], ["created_at", "2019-07-20 07:57:17.605810"], ["updated_at", "2019-07-20 07:57:17.605810"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-07-21"], ["user_id", 1], ["created_at", "2019-07-20 07:57:17.607259"], ["updated_at", "2019-07-20 07:57:17.607259"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-07-22"], ["user_id", 1], ["created_at", "2019-07-20 07:57:17.608574"], ["updated_at", "2019-07-20 07:57:17.608574"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-07-23"], ["user_id", 1], ["created_at", "2019-07-20 07:57:17.609923"], ["updated_at", "2019-07-20 07:57:17.609923"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-07-24"], ["user_id", 1], ["created_at", "2019-07-20 07:57:17.611257"], ["updated_at", "2019-07-20 07:57:17.611257"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-07-25"], ["user_id", 1], ["created_at", "2019-07-20 07:57:17.612575"], ["updated_at", "2019-07-20 07:57:17.612575"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-07-26"], ["user_id", 1], ["created_at", "2019-07-20 07:57:17.613974"], ["updated_at", "2019-07-20 07:57:17.613974"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-07-27"], ["user_id", 1], ["created_at", "2019-07-20 07:57:17.615284"], ["updated_at", "2019-07-20 07:57:17.615284"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-07-28"], ["user_id", 1], ["created_at", "2019-07-20 07:57:17.616589"], ["updated_at", "2019-07-20 07:57:17.616589"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-07-29"], ["user_id", 1], ["created_at", "2019-07-20 07:57:17.617902"], ["updated_at", "2019-07-20 07:57:17.617902"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-07-30"], ["user_id", 1], ["created_at", "2019-07-20 07:57:17.619266"], ["updated_at", "2019-07-20 07:57:17.619266"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-07-31"], ["user_id", 1], ["created_at", "2019-07-20 07:57:17.620571"], ["updated_at", "2019-07-20 07:57:17.620571"]]
+  [1m[35m (5010.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+Completed 500 Internal Server Error in 5095ms (ActiveRecord: 5017.0ms)
+
+
+  
+ActiveRecord::StatementInvalid (SQLite3::BusyException: database is locked: commit transaction):
+  
+app/controllers/application_controller.rb:16:in `set_one_month'
+Started GET "/users/1" for 217.178.27.147 at 2019-07-20 07:58:28 +0000
+Cannot render console from 217.178.27.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "attendances" WHERE "attendances"."user_id" = ? AND ("attendances"."worked_on" BETWEEN ? AND ?)[0m  [["user_id", 1], ["worked_on", "2019-07-01"], ["worked_on", "2019-07-31"]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.5ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-07-01"], ["user_id", 1], ["created_at", "2019-07-20 07:58:29.045718"], ["updated_at", "2019-07-20 07:58:29.045718"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-07-02"], ["user_id", 1], ["created_at", "2019-07-20 07:58:29.049073"], ["updated_at", "2019-07-20 07:58:29.049073"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-07-03"], ["user_id", 1], ["created_at", "2019-07-20 07:58:29.050519"], ["updated_at", "2019-07-20 07:58:29.050519"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-07-04"], ["user_id", 1], ["created_at", "2019-07-20 07:58:29.051877"], ["updated_at", "2019-07-20 07:58:29.051877"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-07-05"], ["user_id", 1], ["created_at", "2019-07-20 07:58:29.053337"], ["updated_at", "2019-07-20 07:58:29.053337"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-07-06"], ["user_id", 1], ["created_at", "2019-07-20 07:58:29.054785"], ["updated_at", "2019-07-20 07:58:29.054785"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-07-07"], ["user_id", 1], ["created_at", "2019-07-20 07:58:29.056262"], ["updated_at", "2019-07-20 07:58:29.056262"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-07-08"], ["user_id", 1], ["created_at", "2019-07-20 07:58:29.057718"], ["updated_at", "2019-07-20 07:58:29.057718"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-07-09"], ["user_id", 1], ["created_at", "2019-07-20 07:58:29.059141"], ["updated_at", "2019-07-20 07:58:29.059141"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-07-10"], ["user_id", 1], ["created_at", "2019-07-20 07:58:29.060478"], ["updated_at", "2019-07-20 07:58:29.060478"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-07-11"], ["user_id", 1], ["created_at", "2019-07-20 07:58:29.061839"], ["updated_at", "2019-07-20 07:58:29.061839"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-07-12"], ["user_id", 1], ["created_at", "2019-07-20 07:58:29.063386"], ["updated_at", "2019-07-20 07:58:29.063386"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-07-13"], ["user_id", 1], ["created_at", "2019-07-20 07:58:29.064905"], ["updated_at", "2019-07-20 07:58:29.064905"]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-07-14"], ["user_id", 1], ["created_at", "2019-07-20 07:58:29.066329"], ["updated_at", "2019-07-20 07:58:29.066329"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-07-15"], ["user_id", 1], ["created_at", "2019-07-20 07:58:29.067775"], ["updated_at", "2019-07-20 07:58:29.067775"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-07-16"], ["user_id", 1], ["created_at", "2019-07-20 07:58:29.069147"], ["updated_at", "2019-07-20 07:58:29.069147"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-07-17"], ["user_id", 1], ["created_at", "2019-07-20 07:58:29.070578"], ["updated_at", "2019-07-20 07:58:29.070578"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-07-18"], ["user_id", 1], ["created_at", "2019-07-20 07:58:29.071951"], ["updated_at", "2019-07-20 07:58:29.071951"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-07-19"], ["user_id", 1], ["created_at", "2019-07-20 07:58:29.073283"], ["updated_at", "2019-07-20 07:58:29.073283"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-07-20"], ["user_id", 1], ["created_at", "2019-07-20 07:58:29.074693"], ["updated_at", "2019-07-20 07:58:29.074693"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-07-21"], ["user_id", 1], ["created_at", "2019-07-20 07:58:29.076093"], ["updated_at", "2019-07-20 07:58:29.076093"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-07-22"], ["user_id", 1], ["created_at", "2019-07-20 07:58:29.077467"], ["updated_at", "2019-07-20 07:58:29.077467"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-07-23"], ["user_id", 1], ["created_at", "2019-07-20 07:58:29.078829"], ["updated_at", "2019-07-20 07:58:29.078829"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-07-24"], ["user_id", 1], ["created_at", "2019-07-20 07:58:29.080262"], ["updated_at", "2019-07-20 07:58:29.080262"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-07-25"], ["user_id", 1], ["created_at", "2019-07-20 07:58:29.081701"], ["updated_at", "2019-07-20 07:58:29.081701"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-07-26"], ["user_id", 1], ["created_at", "2019-07-20 07:58:29.083071"], ["updated_at", "2019-07-20 07:58:29.083071"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-07-27"], ["user_id", 1], ["created_at", "2019-07-20 07:58:29.084409"], ["updated_at", "2019-07-20 07:58:29.084409"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-07-28"], ["user_id", 1], ["created_at", "2019-07-20 07:58:29.085807"], ["updated_at", "2019-07-20 07:58:29.085807"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-07-29"], ["user_id", 1], ["created_at", "2019-07-20 07:58:29.087140"], ["updated_at", "2019-07-20 07:58:29.087140"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-07-30"], ["user_id", 1], ["created_at", "2019-07-20 07:58:29.088498"], ["updated_at", "2019-07-20 07:58:29.088498"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-07-31"], ["user_id", 1], ["created_at", "2019-07-20 07:58:29.089862"], ["updated_at", "2019-07-20 07:58:29.089862"]]
+  [1m[35m (5010.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+Completed 500 Internal Server Error in 5083ms (ActiveRecord: 5016.8ms)
+
+
+  
+ActiveRecord::StatementInvalid (SQLite3::BusyException: database is locked: commit transaction):
+  
+app/controllers/application_controller.rb:16:in `set_one_month'
+Started GET "/users/1" for 217.178.27.147 at 2019-07-20 07:59:09 +0000
+Cannot render console from 217.178.27.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "attendances" WHERE "attendances"."user_id" = ? AND ("attendances"."worked_on" BETWEEN ? AND ?)[0m  [["user_id", 1], ["worked_on", "2019-07-01"], ["worked_on", "2019-07-31"]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.5ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-07-01"], ["user_id", 1], ["created_at", "2019-07-20 07:59:09.719265"], ["updated_at", "2019-07-20 07:59:09.719265"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-07-02"], ["user_id", 1], ["created_at", "2019-07-20 07:59:09.722739"], ["updated_at", "2019-07-20 07:59:09.722739"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-07-03"], ["user_id", 1], ["created_at", "2019-07-20 07:59:09.724089"], ["updated_at", "2019-07-20 07:59:09.724089"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-07-04"], ["user_id", 1], ["created_at", "2019-07-20 07:59:09.725550"], ["updated_at", "2019-07-20 07:59:09.725550"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-07-05"], ["user_id", 1], ["created_at", "2019-07-20 07:59:09.727433"], ["updated_at", "2019-07-20 07:59:09.727433"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-07-06"], ["user_id", 1], ["created_at", "2019-07-20 07:59:09.728769"], ["updated_at", "2019-07-20 07:59:09.728769"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-07-07"], ["user_id", 1], ["created_at", "2019-07-20 07:59:09.730121"], ["updated_at", "2019-07-20 07:59:09.730121"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-07-08"], ["user_id", 1], ["created_at", "2019-07-20 07:59:09.731475"], ["updated_at", "2019-07-20 07:59:09.731475"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-07-09"], ["user_id", 1], ["created_at", "2019-07-20 07:59:09.732817"], ["updated_at", "2019-07-20 07:59:09.732817"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-07-10"], ["user_id", 1], ["created_at", "2019-07-20 07:59:09.734173"], ["updated_at", "2019-07-20 07:59:09.734173"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-07-11"], ["user_id", 1], ["created_at", "2019-07-20 07:59:09.735642"], ["updated_at", "2019-07-20 07:59:09.735642"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-07-12"], ["user_id", 1], ["created_at", "2019-07-20 07:59:09.736999"], ["updated_at", "2019-07-20 07:59:09.736999"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-07-13"], ["user_id", 1], ["created_at", "2019-07-20 07:59:09.738358"], ["updated_at", "2019-07-20 07:59:09.738358"]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-07-14"], ["user_id", 1], ["created_at", "2019-07-20 07:59:09.739721"], ["updated_at", "2019-07-20 07:59:09.739721"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-07-15"], ["user_id", 1], ["created_at", "2019-07-20 07:59:09.741234"], ["updated_at", "2019-07-20 07:59:09.741234"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-07-16"], ["user_id", 1], ["created_at", "2019-07-20 07:59:09.742600"], ["updated_at", "2019-07-20 07:59:09.742600"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-07-17"], ["user_id", 1], ["created_at", "2019-07-20 07:59:09.743940"], ["updated_at", "2019-07-20 07:59:09.743940"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-07-18"], ["user_id", 1], ["created_at", "2019-07-20 07:59:09.745279"], ["updated_at", "2019-07-20 07:59:09.745279"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-07-19"], ["user_id", 1], ["created_at", "2019-07-20 07:59:09.746654"], ["updated_at", "2019-07-20 07:59:09.746654"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-07-20"], ["user_id", 1], ["created_at", "2019-07-20 07:59:09.748011"], ["updated_at", "2019-07-20 07:59:09.748011"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-07-21"], ["user_id", 1], ["created_at", "2019-07-20 07:59:09.749373"], ["updated_at", "2019-07-20 07:59:09.749373"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-07-22"], ["user_id", 1], ["created_at", "2019-07-20 07:59:09.750752"], ["updated_at", "2019-07-20 07:59:09.750752"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-07-23"], ["user_id", 1], ["created_at", "2019-07-20 07:59:09.752916"], ["updated_at", "2019-07-20 07:59:09.752916"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-07-24"], ["user_id", 1], ["created_at", "2019-07-20 07:59:09.754290"], ["updated_at", "2019-07-20 07:59:09.754290"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-07-25"], ["user_id", 1], ["created_at", "2019-07-20 07:59:09.758018"], ["updated_at", "2019-07-20 07:59:09.758018"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-07-26"], ["user_id", 1], ["created_at", "2019-07-20 07:59:09.759464"], ["updated_at", "2019-07-20 07:59:09.759464"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-07-27"], ["user_id", 1], ["created_at", "2019-07-20 07:59:09.760807"], ["updated_at", "2019-07-20 07:59:09.760807"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-07-28"], ["user_id", 1], ["created_at", "2019-07-20 07:59:09.762172"], ["updated_at", "2019-07-20 07:59:09.762172"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-07-29"], ["user_id", 1], ["created_at", "2019-07-20 07:59:09.763519"], ["updated_at", "2019-07-20 07:59:09.763519"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-07-30"], ["user_id", 1], ["created_at", "2019-07-20 07:59:09.764853"], ["updated_at", "2019-07-20 07:59:09.764853"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-07-31"], ["user_id", 1], ["created_at", "2019-07-20 07:59:09.766207"], ["updated_at", "2019-07-20 07:59:09.766207"]]
+  [1m[35m (5010.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (2.4ms)[0m  [1m[31mrollback transaction[0m
+Completed 500 Internal Server Error in 5091ms (ActiveRecord: 5019.3ms)
+
+
+  
+ActiveRecord::StatementInvalid (SQLite3::BusyException: database is locked: commit transaction):
+  
+app/controllers/application_controller.rb:16:in `set_one_month'
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Started GET "/users/1" for 217.178.27.147 at 2019-07-20 07:59:52 +0000
+Cannot render console from 217.178.27.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "attendances" WHERE "attendances"."user_id" = ? AND ("attendances"."worked_on" BETWEEN ? AND ?)[0m  [["user_id", 1], ["worked_on", "2019-07-01"], ["worked_on", "2019-07-31"]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-07-01"], ["user_id", 1], ["created_at", "2019-07-20 07:59:52.060888"], ["updated_at", "2019-07-20 07:59:52.060888"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-07-02"], ["user_id", 1], ["created_at", "2019-07-20 07:59:52.063477"], ["updated_at", "2019-07-20 07:59:52.063477"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-07-03"], ["user_id", 1], ["created_at", "2019-07-20 07:59:52.064786"], ["updated_at", "2019-07-20 07:59:52.064786"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-07-04"], ["user_id", 1], ["created_at", "2019-07-20 07:59:52.066256"], ["updated_at", "2019-07-20 07:59:52.066256"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-07-05"], ["user_id", 1], ["created_at", "2019-07-20 07:59:52.067648"], ["updated_at", "2019-07-20 07:59:52.067648"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-07-06"], ["user_id", 1], ["created_at", "2019-07-20 07:59:52.069001"], ["updated_at", "2019-07-20 07:59:52.069001"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-07-07"], ["user_id", 1], ["created_at", "2019-07-20 07:59:52.070372"], ["updated_at", "2019-07-20 07:59:52.070372"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-07-08"], ["user_id", 1], ["created_at", "2019-07-20 07:59:52.071712"], ["updated_at", "2019-07-20 07:59:52.071712"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-07-09"], ["user_id", 1], ["created_at", "2019-07-20 07:59:52.073083"], ["updated_at", "2019-07-20 07:59:52.073083"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-07-10"], ["user_id", 1], ["created_at", "2019-07-20 07:59:52.074452"], ["updated_at", "2019-07-20 07:59:52.074452"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-07-11"], ["user_id", 1], ["created_at", "2019-07-20 07:59:52.075764"], ["updated_at", "2019-07-20 07:59:52.075764"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-07-12"], ["user_id", 1], ["created_at", "2019-07-20 07:59:52.077180"], ["updated_at", "2019-07-20 07:59:52.077180"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-07-13"], ["user_id", 1], ["created_at", "2019-07-20 07:59:52.078518"], ["updated_at", "2019-07-20 07:59:52.078518"]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-07-14"], ["user_id", 1], ["created_at", "2019-07-20 07:59:52.079866"], ["updated_at", "2019-07-20 07:59:52.079866"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-07-15"], ["user_id", 1], ["created_at", "2019-07-20 07:59:52.081700"], ["updated_at", "2019-07-20 07:59:52.081700"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-07-16"], ["user_id", 1], ["created_at", "2019-07-20 07:59:52.083089"], ["updated_at", "2019-07-20 07:59:52.083089"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-07-17"], ["user_id", 1], ["created_at", "2019-07-20 07:59:52.084431"], ["updated_at", "2019-07-20 07:59:52.084431"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-07-18"], ["user_id", 1], ["created_at", "2019-07-20 07:59:52.085746"], ["updated_at", "2019-07-20 07:59:52.085746"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-07-19"], ["user_id", 1], ["created_at", "2019-07-20 07:59:52.087271"], ["updated_at", "2019-07-20 07:59:52.087271"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-07-20"], ["user_id", 1], ["created_at", "2019-07-20 07:59:52.088605"], ["updated_at", "2019-07-20 07:59:52.088605"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-07-21"], ["user_id", 1], ["created_at", "2019-07-20 07:59:52.089935"], ["updated_at", "2019-07-20 07:59:52.089935"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-07-22"], ["user_id", 1], ["created_at", "2019-07-20 07:59:52.091280"], ["updated_at", "2019-07-20 07:59:52.091280"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-07-23"], ["user_id", 1], ["created_at", "2019-07-20 07:59:52.092640"], ["updated_at", "2019-07-20 07:59:52.092640"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-07-24"], ["user_id", 1], ["created_at", "2019-07-20 07:59:52.093964"], ["updated_at", "2019-07-20 07:59:52.093964"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-07-25"], ["user_id", 1], ["created_at", "2019-07-20 07:59:52.095306"], ["updated_at", "2019-07-20 07:59:52.095306"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-07-26"], ["user_id", 1], ["created_at", "2019-07-20 07:59:52.096710"], ["updated_at", "2019-07-20 07:59:52.096710"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-07-27"], ["user_id", 1], ["created_at", "2019-07-20 07:59:52.098063"], ["updated_at", "2019-07-20 07:59:52.098063"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-07-28"], ["user_id", 1], ["created_at", "2019-07-20 07:59:52.099403"], ["updated_at", "2019-07-20 07:59:52.099403"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-07-29"], ["user_id", 1], ["created_at", "2019-07-20 07:59:52.100708"], ["updated_at", "2019-07-20 07:59:52.100708"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-07-30"], ["user_id", 1], ["created_at", "2019-07-20 07:59:52.102081"], ["updated_at", "2019-07-20 07:59:52.102081"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-07-31"], ["user_id", 1], ["created_at", "2019-07-20 07:59:52.103439"], ["updated_at", "2019-07-20 07:59:52.103439"]]
+  [1m[35m (6.6ms)[0m  [1m[36mcommit transaction[0m
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  Rendered layouts/_header.html.erb (1.1ms)
+Completed 200 OK in 86ms (Views: 30.4ms | ActiveRecord: 11.3ms)
+
+
+Started GET "/users/1" for 217.178.27.147 at 2019-07-20 08:02:10 +0000
+Cannot render console from 217.178.27.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "attendances" WHERE "attendances"."user_id" = ? AND ("attendances"."worked_on" BETWEEN ? AND ?)[0m  [["user_id", 1], ["worked_on", "2019-07-01"], ["worked_on", "2019-07-31"]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+Completed 200 OK in 35ms (Views: 31.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/1" for 217.178.27.147 at 2019-07-20 08:04:32 +0000
+Cannot render console from 217.178.27.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "attendances" WHERE "attendances"."user_id" = ? AND ("attendances"."worked_on" BETWEEN ? AND ?)[0m  [["user_id", 1], ["worked_on", "2019-07-01"], ["worked_on", "2019-07-31"]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mAttendance Load (0.2ms)[0m  [1m[34mSELECT "attendances".* FROM "attendances" WHERE "attendances"."user_id" = ? AND ("attendances"."worked_on" BETWEEN ? AND ?)[0m  [["user_id", 1], ["worked_on", "2019-07-01"], ["worked_on", "2019-07-31"]]
+  Rendered users/show.html.erb within layouts/application (6.1ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionView::Template::Error (undefined method `wday' for #<Attendance:0x00007f2d00908100>):
+    35:       <% @attendances.each do |day| %>
+    36:         <tr>
+    37:           <td><%= l(day.worked_on, format: :short) %></td>
+    38:           <td><%= $days_of_the_week[day.wday] %></td>
+    39:           <td></td>
+    40:           <td></td>
+    41:           <td></td>
+  
+app/views/users/show.html.erb:38:in `block in _app_views_users_show_html_erb__1594836126595094306_69915625645800'
+app/views/users/show.html.erb:35:in `_app_views_users_show_html_erb__1594836126595094306_69915625645800'
+Started GET "/users/1" for 217.178.27.147 at 2019-07-20 08:05:13 +0000
+Cannot render console from 217.178.27.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "attendances" WHERE "attendances"."user_id" = ? AND ("attendances"."worked_on" BETWEEN ? AND ?)[0m  [["user_id", 1], ["worked_on", "2019-07-01"], ["worked_on", "2019-07-31"]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mAttendance Load (0.3ms)[0m  [1m[34mSELECT "attendances".* FROM "attendances" WHERE "attendances"."user_id" = ? AND ("attendances"."worked_on" BETWEEN ? AND ?)[0m  [["user_id", 1], ["worked_on", "2019-07-01"], ["worked_on", "2019-07-31"]]
+  Rendered users/show.html.erb within layouts/application (6.3ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionView::Template::Error (undefined method `wday' for #<Attendance:0x00007f2d05ed0a10>):
+    35:       <% @attendances.each do |day| %>
+    36:         <tr>
+    37:           <td><%= l(day.worked_on, format: :short) %></td>
+    38:           <td><%= $days_of_the_week[day.wday] %></td>
+    39:           <td></td>
+    40:           <td></td>
+    41:           <td></td>
+  
+app/views/users/show.html.erb:38:in `block in _app_views_users_show_html_erb__1594836126595094306_69915674750520'
+app/views/users/show.html.erb:35:in `_app_views_users_show_html_erb__1594836126595094306_69915674750520'
+Started GET "/users/1" for 217.178.27.147 at 2019-07-20 08:05:49 +0000
+Cannot render console from 217.178.27.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "attendances" WHERE "attendances"."user_id" = ? AND ("attendances"."worked_on" BETWEEN ? AND ?)[0m  [["user_id", 1], ["worked_on", "2019-07-01"], ["worked_on", "2019-07-31"]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mAttendance Load (0.2ms)[0m  [1m[34mSELECT "attendances".* FROM "attendances" WHERE "attendances"."user_id" = ? AND ("attendances"."worked_on" BETWEEN ? AND ?)[0m  [["user_id", 1], ["worked_on", "2019-07-01"], ["worked_on", "2019-07-31"]]
+  Rendered users/show.html.erb within layouts/application (6.0ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `wday' for #<Attendance:0x00007f2d0815eaa0>):
+    35:       <% @attendances.each do |day| %>
+    36:         <tr>
+    37:           <td><%=  %></td>
+    38:           <td><%= $days_of_the_week[day.wday] %></td>
+    39:           <td></td>
+    40:           <td></td>
+    41:           <td></td>
+  
+app/views/users/show.html.erb:38:in `block in _app_views_users_show_html_erb__1594836126595094306_69915692915420'
+app/views/users/show.html.erb:35:in `_app_views_users_show_html_erb__1594836126595094306_69915692915420'
+Started GET "/users/1" for 217.178.27.147 at 2019-07-20 08:06:47 +0000
+Cannot render console from 217.178.27.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "attendances" WHERE "attendances"."user_id" = ? AND ("attendances"."worked_on" BETWEEN ? AND ?)[0m  [["user_id", 1], ["worked_on", "2019-07-01"], ["worked_on", "2019-07-31"]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mAttendance Load (0.3ms)[0m  [1m[34mSELECT "attendances".* FROM "attendances" WHERE "attendances"."user_id" = ? AND ("attendances"."worked_on" BETWEEN ? AND ?)[0m  [["user_id", 1], ["worked_on", "2019-07-01"], ["worked_on", "2019-07-31"]]
+  Rendered users/show.html.erb within layouts/application (3.4ms)
+  Rendered layouts/_shim.html.erb (0.2ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+Completed 200 OK in 36ms (Views: 31.9ms | ActiveRecord: 0.7ms)
+
+
+DEPRECATION WARNING: set the 'will_paginate.previous_label' key in your i18n locale instead of editing pagination_options (called from /home/ec2-user/environment/attendance_app/config/environment.rb:8:in `<top (required)>')
+DEPRECATION WARNING: set the 'will_paginate.next_label' key in your i18n locale instead of editing pagination_options (called from /home/ec2-user/environment/attendance_app/config/environment.rb:9:in `<top (required)>')
+Started GET "/" for 217.178.27.147 at 2019-07-20 08:07:33 +0000
+Cannot render console from 217.178.27.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#top as HTML
+  Rendering static_pages/top.html.erb within layouts/application
+  Rendered static_pages/top.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (18.7ms)
+Completed 200 OK in 284ms (Views: 275.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users/1" for 217.178.27.147 at 2019-07-20 08:07:36 +0000
+Cannot render console from 217.178.27.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "attendances" WHERE "attendances"."user_id" = ? AND ("attendances"."worked_on" BETWEEN ? AND ?)[0m  [["user_id", 1], ["worked_on", "2019-07-01"], ["worked_on", "2019-07-31"]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mAttendance Load (0.3ms)[0m  [1m[34mSELECT "attendances".* FROM "attendances" WHERE "attendances"."user_id" = ? AND ("attendances"."worked_on" BETWEEN ? AND ?)[0m  [["user_id", 1], ["worked_on", "2019-07-01"], ["worked_on", "2019-07-31"]]
+  Rendered users/show.html.erb within layouts/application (1028.4ms)
+  Rendered layouts/_shim.html.erb (0.2ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+Completed 200 OK in 1073ms (Views: 1057.1ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/users/1" for 217.178.27.147 at 2019-07-20 08:13:00 +0000
+Cannot render console from 217.178.27.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "attendances" WHERE "attendances"."user_id" = ? AND ("attendances"."worked_on" BETWEEN ? AND ?)[0m  [["user_id", 1], ["worked_on", "2019-07-01"], ["worked_on", "2019-07-31"]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mAttendance Load (0.2ms)[0m  [1m[34mSELECT "attendances".* FROM "attendances" WHERE "attendances"."user_id" = ? AND ("attendances"."worked_on" BETWEEN ? AND ?)[0m  [["user_id", 1], ["worked_on", "2019-07-01"], ["worked_on", "2019-07-31"]]
+  Rendered users/show.html.erb within layouts/application (3.7ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+Completed 200 OK in 37ms (Views: 32.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/1?date=2019-06-01" for 217.178.27.147 at 2019-07-20 08:13:03 +0000
+Cannot render console from 217.178.27.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"date"=>"2019-06-01", "id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "attendances" WHERE "attendances"."user_id" = ? AND ("attendances"."worked_on" BETWEEN ? AND ?)[0m  [["user_id", 1], ["worked_on", "2019-07-01"], ["worked_on", "2019-07-31"]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mAttendance Load (0.2ms)[0m  [1m[34mSELECT "attendances".* FROM "attendances" WHERE "attendances"."user_id" = ? AND ("attendances"."worked_on" BETWEEN ? AND ?)[0m  [["user_id", 1], ["worked_on", "2019-07-01"], ["worked_on", "2019-07-31"]]
+  Rendered users/show.html.erb within layouts/application (4.1ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+Completed 200 OK in 38ms (Views: 33.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/1?date=2019-06-01" for 217.178.27.147 at 2019-07-20 08:13:07 +0000
+Cannot render console from 217.178.27.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"date"=>"2019-06-01", "id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "attendances" WHERE "attendances"."user_id" = ? AND ("attendances"."worked_on" BETWEEN ? AND ?)[0m  [["user_id", 1], ["worked_on", "2019-07-01"], ["worked_on", "2019-07-31"]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mAttendance Load (0.2ms)[0m  [1m[34mSELECT "attendances".* FROM "attendances" WHERE "attendances"."user_id" = ? AND ("attendances"."worked_on" BETWEEN ? AND ?)[0m  [["user_id", 1], ["worked_on", "2019-07-01"], ["worked_on", "2019-07-31"]]
+  Rendered users/show.html.erb within layouts/application (3.6ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+Completed 200 OK in 44ms (Views: 39.6ms | ActiveRecord: 0.7ms)
+
+
+DEPRECATION WARNING: set the 'will_paginate.previous_label' key in your i18n locale instead of editing pagination_options (called from /home/ec2-user/environment/attendance_app/config/environment.rb:8:in `<top (required)>')
+DEPRECATION WARNING: set the 'will_paginate.next_label' key in your i18n locale instead of editing pagination_options (called from /home/ec2-user/environment/attendance_app/config/environment.rb:9:in `<top (required)>')
+Started GET "/users/1?date=2019-06-01" for 217.178.27.147 at 2019-07-20 08:13:28 +0000
+Cannot render console from 217.178.27.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#show as HTML
+  Parameters: {"date"=>"2019-06-01", "id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "attendances" WHERE "attendances"."user_id" = ? AND ("attendances"."worked_on" BETWEEN ? AND ?)[0m  [["user_id", 1], ["worked_on", "2019-07-01"], ["worked_on", "2019-07-31"]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mAttendance Load (0.3ms)[0m  [1m[34mSELECT "attendances".* FROM "attendances" WHERE "attendances"."user_id" = ? AND ("attendances"."worked_on" BETWEEN ? AND ?)[0m  [["user_id", 1], ["worked_on", "2019-07-01"], ["worked_on", "2019-07-31"]]
+  Rendered users/show.html.erb within layouts/application (1099.3ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  Rendered layouts/_header.html.erb (1.2ms)
+Completed 200 OK in 1375ms (Views: 1337.2ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/users/1?date=2019-06-01" for 217.178.27.147 at 2019-07-20 08:13:31 +0000
+Cannot render console from 217.178.27.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"date"=>"2019-06-01", "id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "attendances" WHERE "attendances"."user_id" = ? AND ("attendances"."worked_on" BETWEEN ? AND ?)[0m  [["user_id", 1], ["worked_on", "2019-07-01"], ["worked_on", "2019-07-31"]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mAttendance Load (0.2ms)[0m  [1m[34mSELECT "attendances".* FROM "attendances" WHERE "attendances"."user_id" = ? AND ("attendances"."worked_on" BETWEEN ? AND ?)[0m  [["user_id", 1], ["worked_on", "2019-07-01"], ["worked_on", "2019-07-31"]]
+  Rendered users/show.html.erb within layouts/application (4.0ms)
+  Rendered layouts/_shim.html.erb (0.2ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+Completed 200 OK in 40ms (Views: 34.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users/1?date=2019-06-01" for 217.178.27.147 at 2019-07-20 08:13:35 +0000
+Cannot render console from 217.178.27.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"date"=>"2019-06-01", "id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "attendances" WHERE "attendances"."user_id" = ? AND ("attendances"."worked_on" BETWEEN ? AND ?)[0m  [["user_id", 1], ["worked_on", "2019-07-01"], ["worked_on", "2019-07-31"]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mAttendance Load (0.2ms)[0m  [1m[34mSELECT "attendances".* FROM "attendances" WHERE "attendances"."user_id" = ? AND ("attendances"."worked_on" BETWEEN ? AND ?)[0m  [["user_id", 1], ["worked_on", "2019-07-01"], ["worked_on", "2019-07-31"]]
+  Rendered users/show.html.erb within layouts/application (3.7ms)
+  Rendered layouts/_shim.html.erb (0.2ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+Completed 200 OK in 38ms (Views: 33.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/1?date=2019-06-01" for 217.178.27.147 at 2019-07-20 08:13:40 +0000
+Cannot render console from 217.178.27.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"date"=>"2019-06-01", "id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "attendances" WHERE "attendances"."user_id" = ? AND ("attendances"."worked_on" BETWEEN ? AND ?)[0m  [["user_id", 1], ["worked_on", "2019-07-01"], ["worked_on", "2019-07-31"]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mAttendance Load (0.2ms)[0m  [1m[34mSELECT "attendances".* FROM "attendances" WHERE "attendances"."user_id" = ? AND ("attendances"."worked_on" BETWEEN ? AND ?)[0m  [["user_id", 1], ["worked_on", "2019-07-01"], ["worked_on", "2019-07-31"]]
+  Rendered users/show.html.erb within layouts/application (3.7ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+Completed 200 OK in 38ms (Views: 33.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/1" for 217.178.27.147 at 2019-07-20 08:13:43 +0000
+Cannot render console from 217.178.27.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "attendances" WHERE "attendances"."user_id" = ? AND ("attendances"."worked_on" BETWEEN ? AND ?)[0m  [["user_id", 1], ["worked_on", "2019-07-01"], ["worked_on", "2019-07-31"]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mAttendance Load (0.2ms)[0m  [1m[34mSELECT "attendances".* FROM "attendances" WHERE "attendances"."user_id" = ? AND ("attendances"."worked_on" BETWEEN ? AND ?)[0m  [["user_id", 1], ["worked_on", "2019-07-01"], ["worked_on", "2019-07-31"]]
+  Rendered users/show.html.erb within layouts/application (4.2ms)
+  Rendered layouts/_shim.html.erb (0.2ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+Completed 200 OK in 39ms (Views: 34.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/1" for 217.178.27.147 at 2019-07-20 08:13:46 +0000
+Cannot render console from 217.178.27.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "attendances" WHERE "attendances"."user_id" = ? AND ("attendances"."worked_on" BETWEEN ? AND ?)[0m  [["user_id", 1], ["worked_on", "2019-07-01"], ["worked_on", "2019-07-31"]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mAttendance Load (0.2ms)[0m  [1m[34mSELECT "attendances".* FROM "attendances" WHERE "attendances"."user_id" = ? AND ("attendances"."worked_on" BETWEEN ? AND ?)[0m  [["user_id", 1], ["worked_on", "2019-07-01"], ["worked_on", "2019-07-31"]]
+  Rendered users/show.html.erb within layouts/application (3.8ms)
+  Rendered layouts/_shim.html.erb (0.2ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+Completed 200 OK in 38ms (Views: 34.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/1" for 217.178.27.147 at 2019-07-20 08:14:08 +0000
+Cannot render console from 217.178.27.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "attendances" WHERE "attendances"."user_id" = ? AND ("attendances"."worked_on" BETWEEN ? AND ?)[0m  [["user_id", 1], ["worked_on", "2019-07-01"], ["worked_on", "2019-07-31"]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mAttendance Load (0.2ms)[0m  [1m[34mSELECT "attendances".* FROM "attendances" WHERE "attendances"."user_id" = ? AND ("attendances"."worked_on" BETWEEN ? AND ?)[0m  [["user_id", 1], ["worked_on", "2019-07-01"], ["worked_on", "2019-07-31"]]
+  Rendered users/show.html.erb within layouts/application (4.0ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+Completed 200 OK in 40ms (Views: 34.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/1?date=2019-08-01" for 217.178.27.147 at 2019-07-20 08:14:10 +0000
+Cannot render console from 217.178.27.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"date"=>"2019-08-01", "id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "attendances" WHERE "attendances"."user_id" = ? AND ("attendances"."worked_on" BETWEEN ? AND ?)[0m  [["user_id", 1], ["worked_on", "2019-07-01"], ["worked_on", "2019-07-31"]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mAttendance Load (0.2ms)[0m  [1m[34mSELECT "attendances".* FROM "attendances" WHERE "attendances"."user_id" = ? AND ("attendances"."worked_on" BETWEEN ? AND ?)[0m  [["user_id", 1], ["worked_on", "2019-07-01"], ["worked_on", "2019-07-31"]]
+  Rendered users/show.html.erb within layouts/application (3.9ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+Completed 200 OK in 38ms (Views: 33.8ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/users/1?date=2019-06-01" for 217.178.27.147 at 2019-07-20 08:14:12 +0000
+Cannot render console from 217.178.27.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"date"=>"2019-06-01", "id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "attendances" WHERE "attendances"."user_id" = ? AND ("attendances"."worked_on" BETWEEN ? AND ?)[0m  [["user_id", 1], ["worked_on", "2019-07-01"], ["worked_on", "2019-07-31"]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mAttendance Load (0.2ms)[0m  [1m[34mSELECT "attendances".* FROM "attendances" WHERE "attendances"."user_id" = ? AND ("attendances"."worked_on" BETWEEN ? AND ?)[0m  [["user_id", 1], ["worked_on", "2019-07-01"], ["worked_on", "2019-07-31"]]
+  Rendered users/show.html.erb within layouts/application (3.9ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+Completed 200 OK in 58ms (Views: 53.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/1?date=2019-08-01" for 217.178.27.147 at 2019-07-20 08:14:13 +0000
+Cannot render console from 217.178.27.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"date"=>"2019-08-01", "id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "attendances" WHERE "attendances"."user_id" = ? AND ("attendances"."worked_on" BETWEEN ? AND ?)[0m  [["user_id", 1], ["worked_on", "2019-07-01"], ["worked_on", "2019-07-31"]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mAttendance Load (0.3ms)[0m  [1m[34mSELECT "attendances".* FROM "attendances" WHERE "attendances"."user_id" = ? AND ("attendances"."worked_on" BETWEEN ? AND ?)[0m  [["user_id", 1], ["worked_on", "2019-07-01"], ["worked_on", "2019-07-31"]]
+  Rendered users/show.html.erb within layouts/application (4.1ms)
+  Rendered layouts/_shim.html.erb (0.2ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+Completed 200 OK in 38ms (Views: 33.4ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/users/1?date=2019-08-01" for 217.178.27.147 at 2019-07-20 08:23:55 +0000
+Cannot render console from 217.178.27.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"date"=>"2019-08-01", "id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 142ms (ActiveRecord: 1.1ms)
+
+
+  
+NameError (undefined local variable or method `prams' for #<UsersController:0x00007fe94c0f5838>
+Did you mean?  params
+               params=
+               @_params):
+  
+app/controllers/application_controller.rb:9:in `set_one_month'
+Started GET "/users/1?date=2019-08-01" for 217.178.27.147 at 2019-07-20 08:24:32 +0000
+Cannot render console from 217.178.27.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"date"=>"2019-08-01", "id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "attendances" WHERE "attendances"."user_id" = ? AND ("attendances"."worked_on" BETWEEN ? AND ?)[0m  [["user_id", 1], ["worked_on", "2019-08-01"], ["worked_on", "2019-08-31"]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (5.8ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-08-01"], ["user_id", 1], ["created_at", "2019-07-20 08:24:32.395798"], ["updated_at", "2019-07-20 08:24:32.395798"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-08-02"], ["user_id", 1], ["created_at", "2019-07-20 08:24:32.403581"], ["updated_at", "2019-07-20 08:24:32.403581"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-08-03"], ["user_id", 1], ["created_at", "2019-07-20 08:24:32.404983"], ["updated_at", "2019-07-20 08:24:32.404983"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-08-04"], ["user_id", 1], ["created_at", "2019-07-20 08:24:32.406898"], ["updated_at", "2019-07-20 08:24:32.406898"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-08-05"], ["user_id", 1], ["created_at", "2019-07-20 08:24:32.408280"], ["updated_at", "2019-07-20 08:24:32.408280"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-08-06"], ["user_id", 1], ["created_at", "2019-07-20 08:24:32.409705"], ["updated_at", "2019-07-20 08:24:32.409705"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-08-07"], ["user_id", 1], ["created_at", "2019-07-20 08:24:32.411148"], ["updated_at", "2019-07-20 08:24:32.411148"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-08-08"], ["user_id", 1], ["created_at", "2019-07-20 08:24:32.412553"], ["updated_at", "2019-07-20 08:24:32.412553"]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-08-09"], ["user_id", 1], ["created_at", "2019-07-20 08:24:32.414083"], ["updated_at", "2019-07-20 08:24:32.414083"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-08-10"], ["user_id", 1], ["created_at", "2019-07-20 08:24:32.415688"], ["updated_at", "2019-07-20 08:24:32.415688"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-08-11"], ["user_id", 1], ["created_at", "2019-07-20 08:24:32.417103"], ["updated_at", "2019-07-20 08:24:32.417103"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-08-12"], ["user_id", 1], ["created_at", "2019-07-20 08:24:32.418562"], ["updated_at", "2019-07-20 08:24:32.418562"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-08-13"], ["user_id", 1], ["created_at", "2019-07-20 08:24:32.419923"], ["updated_at", "2019-07-20 08:24:32.419923"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-08-14"], ["user_id", 1], ["created_at", "2019-07-20 08:24:32.421271"], ["updated_at", "2019-07-20 08:24:32.421271"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-08-15"], ["user_id", 1], ["created_at", "2019-07-20 08:24:32.422660"], ["updated_at", "2019-07-20 08:24:32.422660"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-08-16"], ["user_id", 1], ["created_at", "2019-07-20 08:24:32.424063"], ["updated_at", "2019-07-20 08:24:32.424063"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-08-17"], ["user_id", 1], ["created_at", "2019-07-20 08:24:32.425448"], ["updated_at", "2019-07-20 08:24:32.425448"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-08-18"], ["user_id", 1], ["created_at", "2019-07-20 08:24:32.426882"], ["updated_at", "2019-07-20 08:24:32.426882"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-08-19"], ["user_id", 1], ["created_at", "2019-07-20 08:24:32.428547"], ["updated_at", "2019-07-20 08:24:32.428547"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-08-20"], ["user_id", 1], ["created_at", "2019-07-20 08:24:32.430061"], ["updated_at", "2019-07-20 08:24:32.430061"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-08-21"], ["user_id", 1], ["created_at", "2019-07-20 08:24:32.431470"], ["updated_at", "2019-07-20 08:24:32.431470"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-08-22"], ["user_id", 1], ["created_at", "2019-07-20 08:24:32.432902"], ["updated_at", "2019-07-20 08:24:32.432902"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-08-23"], ["user_id", 1], ["created_at", "2019-07-20 08:24:32.434300"], ["updated_at", "2019-07-20 08:24:32.434300"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-08-24"], ["user_id", 1], ["created_at", "2019-07-20 08:24:32.435684"], ["updated_at", "2019-07-20 08:24:32.435684"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-08-25"], ["user_id", 1], ["created_at", "2019-07-20 08:24:32.437129"], ["updated_at", "2019-07-20 08:24:32.437129"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-08-26"], ["user_id", 1], ["created_at", "2019-07-20 08:24:32.438555"], ["updated_at", "2019-07-20 08:24:32.438555"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-08-27"], ["user_id", 1], ["created_at", "2019-07-20 08:24:32.439998"], ["updated_at", "2019-07-20 08:24:32.439998"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-08-28"], ["user_id", 1], ["created_at", "2019-07-20 08:24:32.441442"], ["updated_at", "2019-07-20 08:24:32.441442"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-08-29"], ["user_id", 1], ["created_at", "2019-07-20 08:24:32.442827"], ["updated_at", "2019-07-20 08:24:32.442827"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-08-30"], ["user_id", 1], ["created_at", "2019-07-20 08:24:32.444210"], ["updated_at", "2019-07-20 08:24:32.444210"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-08-31"], ["user_id", 1], ["created_at", "2019-07-20 08:24:32.445602"], ["updated_at", "2019-07-20 08:24:32.445602"]]
+  [1m[35m (7.0ms)[0m  [1m[36mcommit transaction[0m
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mAttendance Load (0.3ms)[0m  [1m[34mSELECT "attendances".* FROM "attendances" WHERE "attendances"."user_id" = ? AND ("attendances"."worked_on" BETWEEN ? AND ?) ORDER BY "attendances"."worked_on" ASC[0m  [["user_id", 1], ["worked_on", "2019-08-01"], ["worked_on", "2019-08-31"]]
+  Rendered users/show.html.erb within layouts/application (4.3ms)
+  Rendered layouts/_shim.html.erb (0.2ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+Completed 200 OK in 123ms (Views: 34.4ms | ActiveRecord: 18.1ms)
+
+
+Started GET "/users/1?date=2019-07-01" for 217.178.27.147 at 2019-07-20 08:24:36 +0000
+Cannot render console from 217.178.27.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"date"=>"2019-07-01", "id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "attendances" WHERE "attendances"."user_id" = ? AND ("attendances"."worked_on" BETWEEN ? AND ?)[0m  [["user_id", 1], ["worked_on", "2019-07-01"], ["worked_on", "2019-07-31"]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mAttendance Load (0.3ms)[0m  [1m[34mSELECT "attendances".* FROM "attendances" WHERE "attendances"."user_id" = ? AND ("attendances"."worked_on" BETWEEN ? AND ?) ORDER BY "attendances"."worked_on" ASC[0m  [["user_id", 1], ["worked_on", "2019-07-01"], ["worked_on", "2019-07-31"]]
+  Rendered users/show.html.erb within layouts/application (4.0ms)
+  Rendered layouts/_shim.html.erb (0.2ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+Completed 200 OK in 37ms (Views: 32.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/1?date=2019-08-01" for 217.178.27.147 at 2019-07-20 08:24:39 +0000
+Cannot render console from 217.178.27.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"date"=>"2019-08-01", "id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "attendances" WHERE "attendances"."user_id" = ? AND ("attendances"."worked_on" BETWEEN ? AND ?)[0m  [["user_id", 1], ["worked_on", "2019-08-01"], ["worked_on", "2019-08-31"]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mAttendance Load (0.3ms)[0m  [1m[34mSELECT "attendances".* FROM "attendances" WHERE "attendances"."user_id" = ? AND ("attendances"."worked_on" BETWEEN ? AND ?) ORDER BY "attendances"."worked_on" ASC[0m  [["user_id", 1], ["worked_on", "2019-08-01"], ["worked_on", "2019-08-31"]]
+  Rendered users/show.html.erb within layouts/application (3.9ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+Completed 200 OK in 38ms (Views: 33.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/1?date=2019-07-01" for 217.178.27.147 at 2019-07-20 08:24:40 +0000
+Cannot render console from 217.178.27.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"date"=>"2019-07-01", "id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "attendances" WHERE "attendances"."user_id" = ? AND ("attendances"."worked_on" BETWEEN ? AND ?)[0m  [["user_id", 1], ["worked_on", "2019-07-01"], ["worked_on", "2019-07-31"]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mAttendance Load (0.3ms)[0m  [1m[34mSELECT "attendances".* FROM "attendances" WHERE "attendances"."user_id" = ? AND ("attendances"."worked_on" BETWEEN ? AND ?) ORDER BY "attendances"."worked_on" ASC[0m  [["user_id", 1], ["worked_on", "2019-07-01"], ["worked_on", "2019-07-31"]]
+  Rendered users/show.html.erb within layouts/application (4.1ms)
+  Rendered layouts/_shim.html.erb (0.2ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+Completed 200 OK in 37ms (Views: 32.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/1?date=2019-06-01" for 217.178.27.147 at 2019-07-20 08:24:43 +0000
+Cannot render console from 217.178.27.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"date"=>"2019-06-01", "id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "attendances" WHERE "attendances"."user_id" = ? AND ("attendances"."worked_on" BETWEEN ? AND ?)[0m  [["user_id", 1], ["worked_on", "2019-06-01"], ["worked_on", "2019-06-30"]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-06-01"], ["user_id", 1], ["created_at", "2019-07-20 08:24:43.886799"], ["updated_at", "2019-07-20 08:24:43.886799"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-06-02"], ["user_id", 1], ["created_at", "2019-07-20 08:24:43.889487"], ["updated_at", "2019-07-20 08:24:43.889487"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-06-03"], ["user_id", 1], ["created_at", "2019-07-20 08:24:43.890870"], ["updated_at", "2019-07-20 08:24:43.890870"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-06-04"], ["user_id", 1], ["created_at", "2019-07-20 08:24:43.892254"], ["updated_at", "2019-07-20 08:24:43.892254"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-06-05"], ["user_id", 1], ["created_at", "2019-07-20 08:24:43.893681"], ["updated_at", "2019-07-20 08:24:43.893681"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-06-06"], ["user_id", 1], ["created_at", "2019-07-20 08:24:43.895100"], ["updated_at", "2019-07-20 08:24:43.895100"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-06-07"], ["user_id", 1], ["created_at", "2019-07-20 08:24:43.896449"], ["updated_at", "2019-07-20 08:24:43.896449"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-06-08"], ["user_id", 1], ["created_at", "2019-07-20 08:24:43.897809"], ["updated_at", "2019-07-20 08:24:43.897809"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-06-09"], ["user_id", 1], ["created_at", "2019-07-20 08:24:43.899193"], ["updated_at", "2019-07-20 08:24:43.899193"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-06-10"], ["user_id", 1], ["created_at", "2019-07-20 08:24:43.900574"], ["updated_at", "2019-07-20 08:24:43.900574"]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-06-11"], ["user_id", 1], ["created_at", "2019-07-20 08:24:43.902019"], ["updated_at", "2019-07-20 08:24:43.902019"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-06-12"], ["user_id", 1], ["created_at", "2019-07-20 08:24:43.903542"], ["updated_at", "2019-07-20 08:24:43.903542"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-06-13"], ["user_id", 1], ["created_at", "2019-07-20 08:24:43.906492"], ["updated_at", "2019-07-20 08:24:43.906492"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-06-14"], ["user_id", 1], ["created_at", "2019-07-20 08:24:43.907907"], ["updated_at", "2019-07-20 08:24:43.907907"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-06-15"], ["user_id", 1], ["created_at", "2019-07-20 08:24:43.909257"], ["updated_at", "2019-07-20 08:24:43.909257"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-06-16"], ["user_id", 1], ["created_at", "2019-07-20 08:24:43.910623"], ["updated_at", "2019-07-20 08:24:43.910623"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-06-17"], ["user_id", 1], ["created_at", "2019-07-20 08:24:43.912021"], ["updated_at", "2019-07-20 08:24:43.912021"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-06-18"], ["user_id", 1], ["created_at", "2019-07-20 08:24:43.913381"], ["updated_at", "2019-07-20 08:24:43.913381"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-06-19"], ["user_id", 1], ["created_at", "2019-07-20 08:24:43.914752"], ["updated_at", "2019-07-20 08:24:43.914752"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-06-20"], ["user_id", 1], ["created_at", "2019-07-20 08:24:43.916088"], ["updated_at", "2019-07-20 08:24:43.916088"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-06-21"], ["user_id", 1], ["created_at", "2019-07-20 08:24:43.917423"], ["updated_at", "2019-07-20 08:24:43.917423"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-06-22"], ["user_id", 1], ["created_at", "2019-07-20 08:24:43.918769"], ["updated_at", "2019-07-20 08:24:43.918769"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-06-23"], ["user_id", 1], ["created_at", "2019-07-20 08:24:43.920194"], ["updated_at", "2019-07-20 08:24:43.920194"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-06-24"], ["user_id", 1], ["created_at", "2019-07-20 08:24:43.922094"], ["updated_at", "2019-07-20 08:24:43.922094"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-06-25"], ["user_id", 1], ["created_at", "2019-07-20 08:24:43.923336"], ["updated_at", "2019-07-20 08:24:43.923336"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-06-26"], ["user_id", 1], ["created_at", "2019-07-20 08:24:43.924535"], ["updated_at", "2019-07-20 08:24:43.924535"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-06-27"], ["user_id", 1], ["created_at", "2019-07-20 08:24:43.925762"], ["updated_at", "2019-07-20 08:24:43.925762"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-06-28"], ["user_id", 1], ["created_at", "2019-07-20 08:24:43.927094"], ["updated_at", "2019-07-20 08:24:43.927094"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-06-29"], ["user_id", 1], ["created_at", "2019-07-20 08:24:43.928308"], ["updated_at", "2019-07-20 08:24:43.928308"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-06-30"], ["user_id", 1], ["created_at", "2019-07-20 08:24:43.929573"], ["updated_at", "2019-07-20 08:24:43.929573"]]
+  [1m[35m (7.8ms)[0m  [1m[36mcommit transaction[0m
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mAttendance Load (0.3ms)[0m  [1m[34mSELECT "attendances".* FROM "attendances" WHERE "attendances"."user_id" = ? AND ("attendances"."worked_on" BETWEEN ? AND ?) ORDER BY "attendances"."worked_on" ASC[0m  [["user_id", 1], ["worked_on", "2019-06-01"], ["worked_on", "2019-06-30"]]
+  Rendered users/show.html.erb within layouts/application (3.9ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+Completed 200 OK in 91ms (Views: 32.1ms | ActiveRecord: 12.7ms)
+
+
+Started GET "/users/1?date=2019-05-01" for 217.178.27.147 at 2019-07-20 08:24:45 +0000
+Cannot render console from 217.178.27.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"date"=>"2019-05-01", "id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "attendances" WHERE "attendances"."user_id" = ? AND ("attendances"."worked_on" BETWEEN ? AND ?)[0m  [["user_id", 1], ["worked_on", "2019-05-01"], ["worked_on", "2019-05-31"]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-05-01"], ["user_id", 1], ["created_at", "2019-07-20 08:24:45.091751"], ["updated_at", "2019-07-20 08:24:45.091751"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-05-02"], ["user_id", 1], ["created_at", "2019-07-20 08:24:45.094342"], ["updated_at", "2019-07-20 08:24:45.094342"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-05-03"], ["user_id", 1], ["created_at", "2019-07-20 08:24:45.095731"], ["updated_at", "2019-07-20 08:24:45.095731"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-05-04"], ["user_id", 1], ["created_at", "2019-07-20 08:24:45.097081"], ["updated_at", "2019-07-20 08:24:45.097081"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-05-05"], ["user_id", 1], ["created_at", "2019-07-20 08:24:45.098545"], ["updated_at", "2019-07-20 08:24:45.098545"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-05-06"], ["user_id", 1], ["created_at", "2019-07-20 08:24:45.099990"], ["updated_at", "2019-07-20 08:24:45.099990"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-05-07"], ["user_id", 1], ["created_at", "2019-07-20 08:24:45.101370"], ["updated_at", "2019-07-20 08:24:45.101370"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-05-08"], ["user_id", 1], ["created_at", "2019-07-20 08:24:45.102771"], ["updated_at", "2019-07-20 08:24:45.102771"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-05-09"], ["user_id", 1], ["created_at", "2019-07-20 08:24:45.104188"], ["updated_at", "2019-07-20 08:24:45.104188"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-05-10"], ["user_id", 1], ["created_at", "2019-07-20 08:24:45.105548"], ["updated_at", "2019-07-20 08:24:45.105548"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-05-11"], ["user_id", 1], ["created_at", "2019-07-20 08:24:45.106920"], ["updated_at", "2019-07-20 08:24:45.106920"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-05-12"], ["user_id", 1], ["created_at", "2019-07-20 08:24:45.108312"], ["updated_at", "2019-07-20 08:24:45.108312"]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-05-13"], ["user_id", 1], ["created_at", "2019-07-20 08:24:45.109795"], ["updated_at", "2019-07-20 08:24:45.109795"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-05-14"], ["user_id", 1], ["created_at", "2019-07-20 08:24:45.111316"], ["updated_at", "2019-07-20 08:24:45.111316"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-05-15"], ["user_id", 1], ["created_at", "2019-07-20 08:24:45.112684"], ["updated_at", "2019-07-20 08:24:45.112684"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-05-16"], ["user_id", 1], ["created_at", "2019-07-20 08:24:45.114072"], ["updated_at", "2019-07-20 08:24:45.114072"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-05-17"], ["user_id", 1], ["created_at", "2019-07-20 08:24:45.115474"], ["updated_at", "2019-07-20 08:24:45.115474"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-05-18"], ["user_id", 1], ["created_at", "2019-07-20 08:24:45.116818"], ["updated_at", "2019-07-20 08:24:45.116818"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-05-19"], ["user_id", 1], ["created_at", "2019-07-20 08:24:45.118247"], ["updated_at", "2019-07-20 08:24:45.118247"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-05-20"], ["user_id", 1], ["created_at", "2019-07-20 08:24:45.119611"], ["updated_at", "2019-07-20 08:24:45.119611"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-05-21"], ["user_id", 1], ["created_at", "2019-07-20 08:24:45.120988"], ["updated_at", "2019-07-20 08:24:45.120988"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-05-22"], ["user_id", 1], ["created_at", "2019-07-20 08:24:45.122405"], ["updated_at", "2019-07-20 08:24:45.122405"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-05-23"], ["user_id", 1], ["created_at", "2019-07-20 08:24:45.123865"], ["updated_at", "2019-07-20 08:24:45.123865"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-05-24"], ["user_id", 1], ["created_at", "2019-07-20 08:24:45.125240"], ["updated_at", "2019-07-20 08:24:45.125240"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-05-25"], ["user_id", 1], ["created_at", "2019-07-20 08:24:45.126764"], ["updated_at", "2019-07-20 08:24:45.126764"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-05-26"], ["user_id", 1], ["created_at", "2019-07-20 08:24:45.128194"], ["updated_at", "2019-07-20 08:24:45.128194"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-05-27"], ["user_id", 1], ["created_at", "2019-07-20 08:24:45.129638"], ["updated_at", "2019-07-20 08:24:45.129638"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-05-28"], ["user_id", 1], ["created_at", "2019-07-20 08:24:45.131004"], ["updated_at", "2019-07-20 08:24:45.131004"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-05-29"], ["user_id", 1], ["created_at", "2019-07-20 08:24:45.132345"], ["updated_at", "2019-07-20 08:24:45.132345"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-05-30"], ["user_id", 1], ["created_at", "2019-07-20 08:24:45.133668"], ["updated_at", "2019-07-20 08:24:45.133668"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "attendances" ("worked_on", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["worked_on", "2019-05-31"], ["user_id", 1], ["created_at", "2019-07-20 08:24:45.135085"], ["updated_at", "2019-07-20 08:24:45.135085"]]
+  [1m[35m (7.9ms)[0m  [1m[36mcommit transaction[0m
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mAttendance Load (0.4ms)[0m  [1m[34mSELECT "attendances".* FROM "attendances" WHERE "attendances"."user_id" = ? AND ("attendances"."worked_on" BETWEEN ? AND ?) ORDER BY "attendances"."worked_on" ASC[0m  [["user_id", 1], ["worked_on", "2019-05-01"], ["worked_on", "2019-05-31"]]
+  Rendered users/show.html.erb within layouts/application (3.9ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+Completed 200 OK in 91ms (Views: 32.7ms | ActiveRecord: 12.9ms)
+
+
+Started GET "/users/1?date=2019-06-01" for 217.178.27.147 at 2019-07-20 08:24:46 +0000
+Cannot render console from 217.178.27.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"date"=>"2019-06-01", "id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "attendances" WHERE "attendances"."user_id" = ? AND ("attendances"."worked_on" BETWEEN ? AND ?)[0m  [["user_id", 1], ["worked_on", "2019-06-01"], ["worked_on", "2019-06-30"]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mAttendance Load (0.4ms)[0m  [1m[34mSELECT "attendances".* FROM "attendances" WHERE "attendances"."user_id" = ? AND ("attendances"."worked_on" BETWEEN ? AND ?) ORDER BY "attendances"."worked_on" ASC[0m  [["user_id", 1], ["worked_on", "2019-06-01"], ["worked_on", "2019-06-30"]]
+  Rendered users/show.html.erb within layouts/application (3.7ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+Completed 200 OK in 59ms (Views: 55.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/1?date=2019-07-01" for 217.178.27.147 at 2019-07-20 08:24:48 +0000
+Cannot render console from 217.178.27.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"date"=>"2019-07-01", "id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "attendances" WHERE "attendances"."user_id" = ? AND ("attendances"."worked_on" BETWEEN ? AND ?)[0m  [["user_id", 1], ["worked_on", "2019-07-01"], ["worked_on", "2019-07-31"]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mAttendance Load (0.4ms)[0m  [1m[34mSELECT "attendances".* FROM "attendances" WHERE "attendances"."user_id" = ? AND ("attendances"."worked_on" BETWEEN ? AND ?) ORDER BY "attendances"."worked_on" ASC[0m  [["user_id", 1], ["worked_on", "2019-07-01"], ["worked_on", "2019-07-31"]]
+  Rendered users/show.html.erb within layouts/application (4.3ms)
+  Rendered layouts/_shim.html.erb (0.2ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+Completed 200 OK in 39ms (Views: 34.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/1" for 217.178.27.147 at 2019-07-20 08:24:51 +0000
+Cannot render console from 217.178.27.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "attendances" WHERE "attendances"."user_id" = ? AND ("attendances"."worked_on" BETWEEN ? AND ?)[0m  [["user_id", 1], ["worked_on", "2019-07-01"], ["worked_on", "2019-07-31"]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mAttendance Load (0.3ms)[0m  [1m[34mSELECT "attendances".* FROM "attendances" WHERE "attendances"."user_id" = ? AND ("attendances"."worked_on" BETWEEN ? AND ?) ORDER BY "attendances"."worked_on" ASC[0m  [["user_id", 1], ["worked_on", "2019-07-01"], ["worked_on", "2019-07-31"]]
+  Rendered users/show.html.erb within layouts/application (4.1ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+Completed 200 OK in 46ms (Views: 41.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/1?date=2019-06-01" for 217.178.27.147 at 2019-07-20 08:24:55 +0000
+Cannot render console from 217.178.27.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"date"=>"2019-06-01", "id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "attendances" WHERE "attendances"."user_id" = ? AND ("attendances"."worked_on" BETWEEN ? AND ?)[0m  [["user_id", 1], ["worked_on", "2019-06-01"], ["worked_on", "2019-06-30"]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mAttendance Load (0.3ms)[0m  [1m[34mSELECT "attendances".* FROM "attendances" WHERE "attendances"."user_id" = ? AND ("attendances"."worked_on" BETWEEN ? AND ?) ORDER BY "attendances"."worked_on" ASC[0m  [["user_id", 1], ["worked_on", "2019-06-01"], ["worked_on", "2019-06-30"]]
+  Rendered users/show.html.erb within layouts/application (4.0ms)
+  Rendered layouts/_shim.html.erb (0.2ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+Completed 200 OK in 38ms (Views: 33.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/1?date=2019-07-01" for 217.178.27.147 at 2019-07-20 08:24:58 +0000
+Cannot render console from 217.178.27.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"date"=>"2019-07-01", "id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "attendances" WHERE "attendances"."user_id" = ? AND ("attendances"."worked_on" BETWEEN ? AND ?)[0m  [["user_id", 1], ["worked_on", "2019-07-01"], ["worked_on", "2019-07-31"]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mAttendance Load (0.3ms)[0m  [1m[34mSELECT "attendances".* FROM "attendances" WHERE "attendances"."user_id" = ? AND ("attendances"."worked_on" BETWEEN ? AND ?) ORDER BY "attendances"."worked_on" ASC[0m  [["user_id", 1], ["worked_on", "2019-07-01"], ["worked_on", "2019-07-31"]]
+  Rendered users/show.html.erb within layouts/application (4.0ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+Completed 200 OK in 38ms (Views: 33.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/1?date=2019-08-01" for 217.178.27.147 at 2019-07-20 08:25:00 +0000
+Cannot render console from 217.178.27.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"date"=>"2019-08-01", "id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "attendances" WHERE "attendances"."user_id" = ? AND ("attendances"."worked_on" BETWEEN ? AND ?)[0m  [["user_id", 1], ["worked_on", "2019-08-01"], ["worked_on", "2019-08-31"]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mAttendance Load (0.3ms)[0m  [1m[34mSELECT "attendances".* FROM "attendances" WHERE "attendances"."user_id" = ? AND ("attendances"."worked_on" BETWEEN ? AND ?) ORDER BY "attendances"."worked_on" ASC[0m  [["user_id", 1], ["worked_on", "2019-08-01"], ["worked_on", "2019-08-31"]]
+  Rendered users/show.html.erb within layouts/application (3.9ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+Completed 200 OK in 37ms (Views: 32.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/1?date=2019-07-01" for 217.178.27.147 at 2019-07-20 08:25:01 +0000
+Cannot render console from 217.178.27.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"date"=>"2019-07-01", "id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "attendances" WHERE "attendances"."user_id" = ? AND ("attendances"."worked_on" BETWEEN ? AND ?)[0m  [["user_id", 1], ["worked_on", "2019-07-01"], ["worked_on", "2019-07-31"]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mAttendance Load (0.3ms)[0m  [1m[34mSELECT "attendances".* FROM "attendances" WHERE "attendances"."user_id" = ? AND ("attendances"."worked_on" BETWEEN ? AND ?) ORDER BY "attendances"."worked_on" ASC[0m  [["user_id", 1], ["worked_on", "2019-07-01"], ["worked_on", "2019-07-31"]]
+  Rendered users/show.html.erb within layouts/application (4.0ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+Completed 200 OK in 38ms (Views: 33.5ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/users/1?date=2019-06-01" for 217.178.27.147 at 2019-07-20 08:25:01 +0000
+Cannot render console from 217.178.27.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"date"=>"2019-06-01", "id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "attendances" WHERE "attendances"."user_id" = ? AND ("attendances"."worked_on" BETWEEN ? AND ?)[0m  [["user_id", 1], ["worked_on", "2019-06-01"], ["worked_on", "2019-06-30"]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mAttendance Load (0.3ms)[0m  [1m[34mSELECT "attendances".* FROM "attendances" WHERE "attendances"."user_id" = ? AND ("attendances"."worked_on" BETWEEN ? AND ?) ORDER BY "attendances"."worked_on" ASC[0m  [["user_id", 1], ["worked_on", "2019-06-01"], ["worked_on", "2019-06-30"]]
+  Rendered users/show.html.erb within layouts/application (4.0ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+Completed 200 OK in 38ms (Views: 33.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/1?date=2019-06-01" for 217.178.27.147 at 2019-07-20 08:25:05 +0000
+Cannot render console from 217.178.27.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"date"=>"2019-06-01", "id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "attendances" WHERE "attendances"."user_id" = ? AND ("attendances"."worked_on" BETWEEN ? AND ?)[0m  [["user_id", 1], ["worked_on", "2019-06-01"], ["worked_on", "2019-06-30"]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mAttendance Load (0.3ms)[0m  [1m[34mSELECT "attendances".* FROM "attendances" WHERE "attendances"."user_id" = ? AND ("attendances"."worked_on" BETWEEN ? AND ?) ORDER BY "attendances"."worked_on" ASC[0m  [["user_id", 1], ["worked_on", "2019-06-01"], ["worked_on", "2019-06-30"]]
+  Rendered users/show.html.erb within layouts/application (4.0ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+Completed 200 OK in 39ms (Views: 34.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/1" for 217.178.27.147 at 2019-07-20 08:25:09 +0000
+Cannot render console from 217.178.27.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "attendances" WHERE "attendances"."user_id" = ? AND ("attendances"."worked_on" BETWEEN ? AND ?)[0m  [["user_id", 1], ["worked_on", "2019-07-01"], ["worked_on", "2019-07-31"]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mAttendance Load (0.3ms)[0m  [1m[34mSELECT "attendances".* FROM "attendances" WHERE "attendances"."user_id" = ? AND ("attendances"."worked_on" BETWEEN ? AND ?) ORDER BY "attendances"."worked_on" ASC[0m  [["user_id", 1], ["worked_on", "2019-07-01"], ["worked_on", "2019-07-31"]]
+  Rendered users/show.html.erb within layouts/application (4.0ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+Completed 200 OK in 61ms (Views: 56.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/1?date=2019-06-01" for 217.178.27.147 at 2019-07-20 08:25:10 +0000
+Cannot render console from 217.178.27.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"date"=>"2019-06-01", "id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "attendances" WHERE "attendances"."user_id" = ? AND ("attendances"."worked_on" BETWEEN ? AND ?)[0m  [["user_id", 1], ["worked_on", "2019-06-01"], ["worked_on", "2019-06-30"]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mAttendance Load (0.3ms)[0m  [1m[34mSELECT "attendances".* FROM "attendances" WHERE "attendances"."user_id" = ? AND ("attendances"."worked_on" BETWEEN ? AND ?) ORDER BY "attendances"."worked_on" ASC[0m  [["user_id", 1], ["worked_on", "2019-06-01"], ["worked_on", "2019-06-30"]]
+  Rendered users/show.html.erb within layouts/application (4.0ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+Completed 200 OK in 43ms (Views: 39.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/1?date=2019-07-01" for 217.178.27.147 at 2019-07-20 08:25:12 +0000
+Cannot render console from 217.178.27.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"date"=>"2019-07-01", "id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "attendances" WHERE "attendances"."user_id" = ? AND ("attendances"."worked_on" BETWEEN ? AND ?)[0m  [["user_id", 1], ["worked_on", "2019-07-01"], ["worked_on", "2019-07-31"]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mAttendance Load (0.3ms)[0m  [1m[34mSELECT "attendances".* FROM "attendances" WHERE "attendances"."user_id" = ? AND ("attendances"."worked_on" BETWEEN ? AND ?) ORDER BY "attendances"."worked_on" ASC[0m  [["user_id", 1], ["worked_on", "2019-07-01"], ["worked_on", "2019-07-31"]]
+  Rendered users/show.html.erb within layouts/application (4.0ms)
+  Rendered layouts/_shim.html.erb (0.3ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+Completed 200 OK in 39ms (Views: 34.9ms | ActiveRecord: 0.8ms)
+
+
